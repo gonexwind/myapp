@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.gonexwind.myapp.home.HomeFragment"
+        android:label="HomeFragment" >
+        <action
+            android:id="@+id/action_homeFragment_to_aboutFragment"
+            app:destination="@id/aboutFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_kalkulatorFragment"
+            app:destination="@id/kalkulatorFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_persegiFragment"
+            app:destination="@id/persegiFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_segitigaFragment"
+            app:destination="@id/segitigaFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/aboutFragment"
+        android:name="com.gonexwind.myapp.about.AboutFragment"
+        android:label="AboutFragment" >
+        <action
+            android:id="@+id/action_aboutFragment_to_webViewFragment"
+            app:destination="@id/webViewFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/kalkulatorFragment"
+        android:name="com.gonexwind.myapp.kalkulator.KalkulatorFragment"
+        android:label="KalkulatorFragment" />
+    <fragment
+        android:id="@+id/persegiFragment"
+        android:name="com.gonexwind.myapp.persegi.PersegiFragment"
+        android:label="PersegiFragment" />
+    <fragment
+        android:id="@+id/segitigaFragment"
+        android:name="com.gonexwind.myapp.segitiga.SegitigaFragment"
+        android:label="SegitigaFragment" />
+    <fragment
+        android:id="@+id/webViewFragment"
+        android:name="com.gonexwind.myapp.webview.WebViewFragment"
+        android:label="WebViewFragment" >
+        <argument
+            android:name="url"
+            app:argType="string" />
+    </fragment>
+</navigation>
